@@ -208,3 +208,11 @@ img {
 .Button:focus {
   background-color: #303f9f;
 }
+.Loader {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vw;
+  z-index: 10;
+  background-color: rgba(128, 128, 128, 0.2);
+}

@@ -32,10 +32,11 @@ class App extends Component {
     }));
   };
 
-  getValue = ({ name, page }) => {
-    this.setState({ visible: true, error: '' });
+  getValue = async ({ name, page }) => {
     try {
-      axios
+      this.setState({ visible: true, error: '' });
+
+      await axios
         .get(
           `${BASE_URL}?key=${API_KEY}&q=${name}&page=${page}&${SEARCH_PARAMS}`
         )
